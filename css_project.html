@@ -1,0 +1,189 @@
+<DOCTYPE html>
+	<html>
+		<head>
+			<meta charset="utf-8" />
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+			<title>CSS Web Page</title>
+
+			<style>
+				
+				body {
+					margin: 0;
+					padding: 0;
+					line-height: 1.5em;
+				}
+
+				#header {
+					background: black;
+					font-family: Arial;
+					height: 100px;
+				}
+
+				#contentwrapper {
+					float:  left;
+					width: 100%;
+				}
+
+				#contentcolumn {
+					margin: 0 230px 0 230px;
+				}
+
+				#leftcolumn {
+					float: left;
+					width: 230px;
+					margin-left: -100%;
+					background: #24C8FF;
+				}
+
+				#rightcolumn {
+					float: left;
+					width: 230px;
+					margin-left: -230px;
+					background: #FFFB00;
+				}
+
+				.innertext {
+					margin: 20px;
+					font-family: Arial;
+					color: #5E5E5E;
+				}
+
+				#footer {
+					clear: left;
+					width: 100%;
+					background: black;
+					color: #FFF;
+					font-family: Arial;
+					text-align: center;
+					padding: 4px;
+				}
+
+				/* ##### Navigation Bar ##### */
+
+				ul {
+					list-style-type: none;
+					margin: 0;
+					padding: 0;
+					background-color: #000;
+				}
+
+				li {
+					float: left;
+					border-right: 1px colid #bbb;
+				}
+
+				li : last-child {
+					border-right: none;
+				}
+
+				li a {
+					display: block;
+					color: white;
+					text-align: center;
+					text-decoration: none;
+				}
+
+				li a:hover:not {
+					background-color: #808080;
+				}
+
+				.active {
+					background-color: #0099ff;
+				}
+
+				/* ##### Responsive layout CSS ##### */
+
+				@media (max-width:  840px) { /* drop right column down */
+
+					#leftcolumn {
+						margin-left: -100%;
+					}
+
+					#rightcolumn {
+						float: none;
+						width: 100%;
+						margin-left: 0;
+						clear: both;
+					}
+
+					#contentcolumn {
+						margin-right: 0;
+					}
+
+				}
+
+				@media (max-width:  600px) { /* drop left column down */
+
+					#leftcolumn {
+						float: none;
+						width: 100%;
+						clear: both;
+						margin-left: 0;
+					}
+
+					#contentcolumn {
+						margin-left: 0;
+					}
+
+				}
+
+			</style>
+
+		</head>
+		<body>
+			
+		<div id="container">
+
+			<div id="header">
+				<ul style="display: inline;">
+					<li><a class="active" href="#home">Home</a></li>
+					<li><a href="#news">About</a></li>
+					<li><a href="#contact">News</a></li>
+					<li><a href="#about">Contact</a></li>
+				</ul>
+				
+			</div>
+
+			<div id="contentwrapper">
+
+				<div id="contetncolumn">
+					<div class="innertext">
+						<b>Welcome</b> <br /> I'm baby vexillologist literally flexitarian pabst pickled franzen. 
+						Hashtag cornhole vice YOLO pinterest. Activated charcoal authentic jean shorts lyft godard 
+						photo booth butcher kombucha meditation live-edge poutine banjo. Thundercats selvage hammock 
+						gochujang small batch cronut pabst cornhole green juice pour-over cloud bread banh mi 
+						drinking vinegar activated charcoal stumptown. Organic cornhole stumptown health goth 
+						edison bulb master cleanse. Roof party vexillologist coloring book, cronut bushwick echo 
+						park hashtag authentic blue bottle hella migas adaptogen freegan brunch. Fashion axe 
+						intelligentsia locavore palo santo meh la croix.
+					</div>
+				</div>
+				
+			</div>
+
+			<div id="leftcolumn">
+				<div class="innertext">
+					<b>Left Column: <em>230px</em></b><br /> I'm baby butcher semiotics green juice, gastropub kinfolk 
+					literally bicycle rights marfa tote bag distillery. Cronut irony cold-pressed cornhole shabby chic p
+					hoto booth man braid. Iceland viral hexagon williamsburg. Freegan tote bag subway tile iPhone lomo, 
+					post-ironic lumbersexual irony pitchfork jianbing activated charcoal taxidermy pabst vape pour-over. 
+					Mlkshk jean shorts hell of organic banh mi viral paleo. Next level direct trade godard, church-key 
+					chillwave photo booth synth deep v fixie viral yuccie brooklyn. YOLO try-hard subway tile vaporware 
+					edison bulb.
+				</div>
+			</div>
+
+			<div id="rightcolumn">
+				<div class="innertext">
+					<b>Right Column: <em>230px</em></b><br /> I'm baby adaptogen blog leggings cliche ennui wayfarers 
+					shabby chic chambray iPhone sustainable blue bottle thundercats chartreuse tumblr. Neutra taxidermy 
+					shabby chic edison bulb chambray small batch green juice 8-bit man braid keytar selfies. DIY hexagon 
+					intelligentsia biodiesel, jianbing wayfarers literally. Artisan literally pitchfork meggings 
+					scenester brooklyn fashion axe skateboard locavore lomo pickled ugh.
+				</div>
+			</div>
+			
+		</div>
+
+		</body>
+	</html>
